@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -41,6 +42,11 @@ class DatabaseSeeder extends Seeder
             'phone_number' => '0954654444',
             'address' => 'damascus',
         ]);
+
+        Category::factory()->create(['category_name'=>'furniture']);
+        Category::factory()->create(['category_name'=>'electronics']);
+        Category::factory()->create(['category_name'=>'accessories']);
+        Category::factory()->create(['category_name'=>'clothes']);
 
     }
 }
